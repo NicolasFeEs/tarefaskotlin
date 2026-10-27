@@ -1,19 +1,23 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    print("entre com um valor ")
-    val n = readLine()?.toIntOrNull()
 
-    if (n == null) {
-        println("valor entrado invalido")
-    }else{
-        println("valor entrado $n")
-        if(n<10){
-            println("valor entrado invalido")
-        }else{
-            for(i in 1..n){
-                println("$i, USCS")
-            }
+fun main() {
+    println("-----------inicio do programa-----------")
+    print("entre com um valor numerico inteiro: ")
+
+    val valor = readLine()?.toIntOrNull()
+
+    if (valor != null) {
+        println("valor entrado: $valor")
+
+        if(valor > 10){
+            println("valor entrado maior que 10")
+        } else {
+            println("valor entrado menor que 10")
         }
+    } else {
+        println("entre com um valor numerico inteiro")
     }
+
+    println("-----------fim do programa-----------")
+    print("pressione enter para sair")
+    readLine()
 }
